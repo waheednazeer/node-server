@@ -10,11 +10,11 @@ POST http://localhost:8080/students HTTP/1.1
 content-type: application/json
 
 {
-  "firstName": "Maryam",
+  "firstName": "Eeshah",
   "lastName":"Waheed",
-  "dob": "06/05/2016",
+  "dob": "06/01/2006",
   "mobile": "0321 999 2222",
-  "email": "maryam@fake.com",
+  "email": "eeshah@fake.com",
   "address": "Gulberg Green",
   "city": "Islamabad",
   "country": "Pakistan"
@@ -24,10 +24,10 @@ POST http://localhost:8080/courses HTTP/1.1
 content-type: application/json
 
 {
-  "enrolledYear": "2022",
+  "enrolledYear": "2019",
   "enrolledDegree": "BS",
   "major": "Business Management",
-  "registeredCourses": "MG100, MTH107",
+  "registeredCourses": "CSE341",
   "collegeName": "School of Managemnet Sciences"
 }
 
@@ -45,12 +45,12 @@ POST https://cse341-projet-2db-collections.onrender.com/students HTTP/1.1
 content-type: application/json
 
 {
-  "firstName": "Ibrahim",
-  "lastName":"Waheed",
-  "dob": "05/06/2017",
+  "firstName": "Asfhan",
+  "lastName":"Ullah",
+  "dob": "05/06/2009",
   "mobile": "0321 111 2222",
-  "email": "ibrahim@fake.com",
-  "address": "Gulberg Green",
+  "email": "asf@fake.com",
+  "address": "Koral Town",
   "city": "Islamabad",
   "country": "Pakistan"
 }
@@ -60,9 +60,9 @@ POST https://cse341-projet-2db-collections.onrender.com/courses HTTP/1.1
 content-type: application/json
 
 {
-  "enrolledYear": "2022",
-  "enrolledDegree": "BS",
-  "major": "Business Management",
-  "registeredCourses": "MG100, MTH107",
+  "enrolledYear": "2020",
+  "enrolledDegree": "BA",
+  "major": "Communication",
+  "registeredCourses": "ENG106",
   "collegeName": "School of Managemnet Sciences"
 }
