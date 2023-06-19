@@ -5,7 +5,7 @@
     "description": "Students & Courses Collections in Mongodb",
     "version": "1.0.0"
   },
-  "host": "https://cse341-projet-2db-collections.onrender.com",
+  "host": "cse341-projet-2db-collections.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
