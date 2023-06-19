@@ -2,7 +2,10 @@
 ### Get all students
 GET http://localhost:8080/students
 
-### Create contact
+### Get all courses
+GET http://localhost:8080/courses
+
+### Create student
 POST http://localhost:8080/students HTTP/1.1
 content-type: application/json
 
@@ -16,7 +19,7 @@ content-type: application/json
   "city": "Islamabad",
   "country": "Pakistan"
 }
-### Create contact
+### Create course
 POST http://localhost:8080/courses HTTP/1.1
 content-type: application/json
 
@@ -28,17 +31,17 @@ content-type: application/json
   "collegeName": "School of Managemnet Sciences"
 }
 
-
-
-
+// PRODUCTION Deploy
+### Get all students
+GET https://cse341-projet-2db-collections.onrender.com/students
 
 // PRODUCTION Deploy
-### Get all contacts
-GET https://lesson4-swagger.onrender.com/contacts
+### Get all courses
+GET https://cse341-projet-2db-collections.onrender.com/courses
 
 
-### Create contact
-POST https://lesson4-swagger.onrender.com/contacts HTTP/1.1
+### Create student
+POST https://cse341-projet-2db-collections.onrender.com/students HTTP/1.1
 content-type: application/json
 
 {
@@ -50,4 +53,16 @@ content-type: application/json
   "address": "Gulberg Green",
   "city": "Islamabad",
   "country": "Pakistan"
+}
+
+### Create course
+POST https://cse341-projet-2db-collections.onrender.com/courses HTTP/1.1
+content-type: application/json
+
+{
+  "enrolledYear": "2022",
+  "enrolledDegree": "BS",
+  "major": "Business Management",
+  "registeredCourses": "MG100, MTH107",
+  "collegeName": "School of Managemnet Sciences"
 }
