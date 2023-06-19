@@ -1,46 +1,40 @@
 // LOCALHOST
-### Get all contacts
-GET http://localhost:8080/contacts
-
-
-### Get contact by id
-GET http://localhost:8080/contacts/622023f642f9ab4cd6e060b3
-
+### Get all students
+GET http://localhost:8080/students
 
 ### Create contact
-POST http://localhost:8080/contacts HTTP/1.1
+POST http://localhost:8080/students HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Imran",
-    "lastName":"Ashraf",
-    "email":"imranb@fake.com",
-    "favoriteColor":"White",
-    "birthday":"04/04/1989"
+  "firstName": "Maryam",
+  "lastName":"Waheed",
+  "dob": "06/05/2016",
+  "mobile": "0321 999 2222",
+  "email": "maryam@fake.com",
+  "address": "Gulberg Green",
+  "city": "Islamabad",
+  "country": "Pakistan"
 }
-
-
-### PUT contact
-PUT http://localhost:8080/contacts/648d5291d8df37feeb75608b HTTP/1.1
+### Create contact
+POST http://localhost:8080/courses HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Maryam",
-    "lastName":"Waheed",
-    "email":"test@gmail.com",
-    "favoriteColor":"Green",
-    "birthday":"12/12/20"
+  "enrolledYear": "2022",
+  "enrolledDegree": "BS",
+  "major": "Business Management",
+  "registeredCourses": "MG100, MTH107",
+  "collegeName": "School of Managemnet Sciences"
 }
-### DELETE contact
-DELETE http://localhost:8080/contacts/648a8d8909b57ba8c8f3cc75 HTTP/1.1
+
+
+
+
 
 // PRODUCTION Deploy
 ### Get all contacts
 GET https://lesson4-swagger.onrender.com/contacts
-
-
-### Get contact by id
-GET https://lesson4-swagger.onrender.com/contacts/622023f642f9ab4cd6e060b3
 
 
 ### Create contact
@@ -48,26 +42,12 @@ POST https://lesson4-swagger.onrender.com/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Eeshah",
-    "lastName":"Waheed",
-    "email":"Eeshah@test.com",
-    "favoriteColor":"Purple",
-    "birthday":"06/19/2000"
+  "firstName": "Ibrahim",
+  "lastName":"Waheed",
+  "dob": "05/06/2017",
+  "mobile": "0321 111 2222",
+  "email": "ibrahim@fake.com",
+  "address": "Gulberg Green",
+  "city": "Islamabad",
+  "country": "Pakistan"
 }
-
-
-### PUT contact
-PUT https://lesson4-swagger.onrender.com/contacts/648d5291d8df37feeb75608b HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"Maryam",
-    "lastName":"Waheed",
-    "email":"maryamr@fake.com",
-    "favoriteColor":"Pink",
-    "birthday":"06/19/2000"
-}
-
-
-### DELETE contact
-DELETE https://lesson4-swagger.onrender.com/contacts/648aa2cd951b6c609618772e HTTP/1.1
