@@ -51,15 +51,15 @@ content-type: application/json
 
 // PRODUCTION Deploy
 ### Get all students
-GET https://cse341-projet-2db-collections.onrender.com/students
+GET https://cse341-lesson6-validation.onrender.com/students
 
 // PRODUCTION Deploy
 ### Get all courses
-GET https://cse341-projet-2db-collections.onrender.com/courses
+GET hhttps://cse341-lesson6-validation.onrender.com/courses
 
 
 ### Create student
-POST https://cse341-projet-2db-collections.onrender.com/students HTTP/1.1
+POST https://cse341-lesson6-validation.onrender.com/students HTTP/1.1
 content-type: application/json
 
 {
@@ -74,7 +74,7 @@ content-type: application/json
 }
 
 ### Create course
-POST https://cse341-projet-2db-collections.onrender.com/courses HTTP/1.1
+POST https://cse341-lesson6-validation.onrender.com/courses HTTP/1.1
 content-type: application/json
 
 {
@@ -84,3 +84,8 @@ content-type: application/json
   "registeredCourses": "ENG106",
   "collegeName": "School of Managemnet Sciences"
 }
+### DELETE student
+DELETE https://cse341-lesson6-validation.onrender.com/students/6490cdb68ed76a13e0aa4c66 HTTP/1.1
+
+### DELETE course
+DELETE https://cse341-lesson6-validation.onrender.com/courses/64979ee432df33ec64496d4d HTTP/1.1
