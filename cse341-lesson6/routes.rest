@@ -24,11 +24,29 @@ POST http://localhost:8080/courses HTTP/1.1
 content-type: application/json
 
 {
-  "enrolledYear": "2022",
+  "enrolledYear": "2026",
   "enrolledDegree": "MED",
   "major": "Business Management",
   "registeredCourses": "CSE341",
   "collegeName": "School of Managemnet Sciences"
+}
+
+### DELETE student
+DELETE http://localhost:8080/students/6490cdb68ed76a13e0aa4c66 HTTP/1.1
+
+### PUT student
+PUT http://localhost:8080/students/6490cbef8ed76a13e0aa4c65 HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "SARFRAZ",
+  "lastName":"NAWAZ",
+  "dob": "06/01/2006",
+  "mobile": "0321 999 2222",
+  "email": "eeshah@abc.com",
+  "address": "Gulberg Green",
+  "city": "Islamabad",
+  "country": "Pakistan"
 }
 
 // PRODUCTION Deploy
