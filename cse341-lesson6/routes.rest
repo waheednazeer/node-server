@@ -2,9 +2,6 @@
 ### Get all students
 GET http://localhost:8080/students
 
-### Get all courses
-GET http://localhost:8080/courses
-
 ### Create student
 POST http://localhost:8080/students HTTP/1.1
 content-type: application/json
@@ -19,20 +16,6 @@ content-type: application/json
   "city": "Islamabad",
   "country": "Pakistan"
 }
-### Create course
-POST http://localhost:8080/courses HTTP/1.1
-content-type: application/json
-
-{
-  "enrolledYear": "2026",
-  "enrolledDegree": "MED",
-  "major": "Business Management",
-  "registeredCourses": "CSE341",
-  "collegeName": "School of Managemnet Sciences"
-}
-
-### DELETE student
-DELETE http://localhost:8080/students/6490cdb68ed76a13e0aa4c66 HTTP/1.1
 
 ### PUT student
 PUT http://localhost:8080/students/6490cbef8ed76a13e0aa4c65 HTTP/1.1
@@ -49,9 +32,44 @@ content-type: application/json
   "country": "Pakistan"
 }
 
+### DELETE student
+DELETE http://localhost:8080/students/6490cdb68ed76a13e0aa4c66 HTTP/1.1
+
+### Get all courses
+GET http://localhost:8080/courses
+
+### Create course
+POST http://localhost:8080/courses HTTP/1.1
+content-type: application/json
+
+{
+  "enrolledYear": "2026",
+  "enrolledDegree": "MED",
+  "major": "Business Management",
+  "registeredCourses": "CSE341",
+  "collegeName": "School of Managemnet Sciences"
+}
+
+### Update course
+PUT http://localhost:8080/courses/6490cdb68ed76a13e0aa4c66 HTTP/1.1
+content-type: application/json
+
+{
+  "enrolledYear": "2026",
+  "enrolledDegree": "MED",
+  "major": "Business Management",
+  "registeredCourses": "CSE341",
+  "collegeName": "School of Managemnet Sciences"
+}
+
+### DELETE COURSE
+DELETE http://localhost:8080/courses/6490cdb68ed76a13e0aa4c66 HTTP/1.1
+
 // PRODUCTION Deploy
 ### Get all students
 GET https://cse341-lesson6-validation.onrender.com/students
+
+
 
 // PRODUCTION Deploy
 ### Get all courses
@@ -73,6 +91,25 @@ content-type: application/json
   "country": "Pakistan"
 }
 
+### PUT student
+PUT https://cse341-lesson6-validation.onrender.com/6490cbef8ed76a13e0aa4c65 HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "SARFRAZ",
+  "lastName":"NAWAZ",
+  "dob": "06/01/2006",
+  "mobile": "0321 999 2222",
+  "email": "eeshah@abc.com",
+  "address": "Gulberg Green",
+  "city": "Islamabad",
+  "country": "Pakistan"
+}
+
+### DELETE student
+DELETE https://cse341-lesson6-validation.onrender.com/students/6490cdb68ed76a13e0aa4c66 HTTP/1.1
+
+
 ### Create course
 POST https://cse341-lesson6-validation.onrender.com/courses HTTP/1.1
 content-type: application/json
@@ -84,8 +121,6 @@ content-type: application/json
   "registeredCourses": "ENG106",
   "collegeName": "School of Managemnet Sciences"
 }
-### DELETE student
-DELETE https://cse341-lesson6-validation.onrender.com/students/6490cdb68ed76a13e0aa4c66 HTTP/1.1
 
 ### DELETE course
 DELETE https://cse341-lesson6-validation.onrender.com/courses/64979ee432df33ec64496d4d HTTP/1.1
