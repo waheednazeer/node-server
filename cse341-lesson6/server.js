@@ -18,6 +18,20 @@ app
   })
   .use('/', require('./routes/router.js'));
 
+  app.use(async (req, res, next) => {
+    next({status: 404, message: 'Ohh, we can not serve you. Sorry, we appear to have lost that page.'})
+  })
+
+  process.on('uncaughtException', (err, origin) => {
+    console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+  });
+
+  app.use(async (err, req, res, next) => {
+    console.error(`Error at: "${req.originalUrl}": ${err.message}`)
+    if(err.status == 404){ message = err.message} else {message = 'Oh no! There was a crash. Maybe try a different route?'}
+    res.send(err)
+  });
+
 mongodb.initDb((err) => {
   if (err) {
     console.log(err);
