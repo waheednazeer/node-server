@@ -26,14 +26,14 @@ content-type: application/json
   "lastName":"NAWAZ",
   "dob": "06/01/2006",
   "mobile": "0321 999 2222",
-  "email": "eeshah@abc.com",
-  "address": "Gulberg Green",
+  "email": "sarfraz",
+  "address": "DHA Phase 1",
   "city": "Islamabad",
   "country": "Pakistan"
 }
 
 ### DELETE student
-DELETE http://localhost:8080/students/6490cdb68ed76a13e0aa4c66 HTTP/1.1
+DELETE http://localhost:8080/students/6490cbef8ed76a13e0aa4c65 HTTP/1.1
 
 ### Get all courses
 GET http://localhost:8080/courses
