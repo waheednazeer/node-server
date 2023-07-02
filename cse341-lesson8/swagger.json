@@ -14,9 +14,10 @@
     "/": {
       "get": {
         "description": "",
+        "parameters": [],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -24,17 +25,62 @@
     "/students": {
       "get": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "OK"
           }
         }
       },
       "post": {
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "dob": {
+                  "example": "any"
+                },
+                "mobile": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "address": {
+                  "example": "any"
+                },
+                "city": {
+                  "example": "any"
+                },
+                "country": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
+          "201": {
+            "description": "Created"
+          },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -48,11 +94,50 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "dob": {
+                  "example": "any"
+                },
+                "mobile": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "address": {
+                  "example": "any"
+                },
+                "city": {
+                  "example": "any"
+                },
+                "country": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -67,26 +152,65 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
     },
-    "/courses": {
+    "/courses/": {
       "get": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "OK"
           }
         }
       },
       "post": {
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "enrolledYear": {
+                  "example": "any"
+                },
+                "enrolledDegree": {
+                  "example": "any"
+                },
+                "major": {
+                  "example": "any"
+                },
+                "registeredCourses": {
+                  "example": "any"
+                },
+                "collegeName": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
+          "201": {
+            "description": "Created"
+          },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -100,11 +224,41 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "enrolledYear": {
+                  "example": "any"
+                },
+                "enrolledDegree": {
+                  "example": "any"
+                },
+                "major": {
+                  "example": "any"
+                },
+                "registeredCourses": {
+                  "example": "any"
+                },
+                "collegeName": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -119,8 +273,11 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
