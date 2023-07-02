@@ -5,7 +5,7 @@
     "description": "Students & Courses Collections in Mongodb",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-lesson8-oauth.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
