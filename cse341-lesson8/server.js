@@ -8,7 +8,21 @@ const { auth } = require('express-openid-connect');
 
 const app = express();
 
+
 const port = process.env.PORT || 8080;
+
+// Oauth code
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL: process.env.BASE_URL,
+  clientID: process.env.CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL,
+};
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+
 
 if (process.env.NODE_ENV=== 'development'){
   app.use(morgan('dev'));
@@ -32,11 +46,14 @@ app
     console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
   });
 
+ // error handler
+
   app.use(async (err, req, res, next) => {
     console.error(`Error at: "${req.originalUrl}": ${err.message}`)
-    if(err.status == 404){ message = err.message} else {message = 'Oh no! There was a crash. Maybe try a different route?'}
-    res.send(err)
+  res.send(err.message)
   });
+
+  // db connected and server running
 
 mongodb.initDb((err) => {
   if (err) {

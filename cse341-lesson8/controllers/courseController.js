@@ -9,7 +9,15 @@ const getAllCourse = async (req, res) => {
     res.status(200).json(lists);
   });
 }catch(error){
-res.send(error);
+  const msg=`
+  <p>
+  Internal server error in (getAllCourse) function<br>
+  Error: ${error.message}
+  </p>
+  `;
+  
+res.send(msg);
+console.log(error.message);
 }
 };
 
@@ -28,7 +36,7 @@ const createCourse = async (req, res) => {
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
-    res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+    res.status(500).json(response.error || 'Some error occurred while creating the courw3.');
   }
 };
 

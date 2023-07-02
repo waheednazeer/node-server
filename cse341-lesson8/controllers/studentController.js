@@ -9,7 +9,14 @@ const getAll = async (req, res) => {
       res.status(200).json(lists);
       });
     }catch(error){
-      res.send(error);
+      const msg=`
+    <p>
+    Internal server error in (getAllCourse) function<br>
+    Error: ${error.message}
+    </p>
+    `; 
+    res.send(msg);
+    console.log(error.message);
     }
 };
 
