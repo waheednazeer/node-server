@@ -25,11 +25,11 @@ const getMsg= (req, res)=>{
   <p>
   This is <strong>Node Server</strong> home page<br>
   for accessing all students from database access 
-  <a href=http://localhost:8080/students>Students</a>
+  <a href=https://cse341-lesson8-oauth.onrender.com/students>Students</a>
   </p>
   <p>
   for accessing all courses from database access 
-  <a href=http://localhost:8080/courses>Courses</a>
+  <a href=https://cse341-lesson8-oauth.onrender.com/courses>Courses</a>
   </p>
   `;
 
