@@ -8,7 +8,7 @@ const utilities = require('../utilities/index.js');
 //utilities.Util.handleErrors(studentController.deleteStudent)
 
 router.get('/', utilities.Util.handleErrors(studentController.getMsg) );
-router.get('/students', requiresAuth(), utilities.Util.handleErrors(studentController.getAll));
+router.get('/students', utilities.Util.handleErrors(studentController.getAll));
 
 router.post('/students', requiresAuth(), validation.saveStudent, utilities.Util.handleErrors(studentController.createStudent) );
 router.put('/:id', requiresAuth(), validation.saveStudent, utilities.Util.handleErrors(studentController.updateStudent) );
