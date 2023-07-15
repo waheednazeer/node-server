@@ -1,0 +1,15 @@
+### get
+
+GET http://localhost:3000
+
+### post
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "firstName" : "Waheed",
+    "lastName" : "Nazir",
+    "email" : "saeed@341.edu",
+    "age" : 45
+}
