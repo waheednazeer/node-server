@@ -5,7 +5,7 @@ const utilities = require('../utilities/index.js');
 const validation = require('../middleware/validate');
 const courseController = require('../controllers/courseController');
 
-router.get('/', utilities.Util.handleErrors(courseController.getAllCourse));
+router.get('/', requiresAuth(), utilities.Util.handleErrors(courseController.getAllCourse));
 //utilities.Util.handleErrors(courseController.deleteCourse)
 
 router.post('/', requiresAuth(), validation.saveCourse, utilities.Util.handleErrors(courseController.createCourse));

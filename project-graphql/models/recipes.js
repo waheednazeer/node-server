@@ -63,5 +63,6 @@ const Schema = mongoose.Schema;
             }
         });
   
-    module.exports = mongoose.model('Recipes', recipeSchema);
+    module.exports = mongoose.model('recipes', recipeSchema);
  
+    

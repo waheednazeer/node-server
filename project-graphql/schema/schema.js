@@ -1,6 +1,7 @@
 const graphql = require('graphql');
 const Book = require('../models/book');
 const Author = require('../models/author');
+const Recipe = require('../models/recipes');
 
 const { 
     GraphQLObjectType, GraphQLString, 
@@ -11,7 +12,44 @@ const {
 //Schema defines data on the Graph like object types(book type), relation between 
 //these object types and describes how it can reach into the graph to interact with 
 //the data to retrieve or mutate the data   
+/******************************************
+ * Recipe type for graphql
+ * 
+ * ***************************************/
+const author_type = new GraphQLObjectType({
+    name: 'author',
+    fields: () => ({
+      name: { type: GraphQLString },
+      url: { type: GraphQLString },
+    }),
+  })
 
+const RecipeType = new GraphQLObjectType({
+    name: 'Recipe',
+    //We are wrapping fields in the function as we dont want to execute this ultil 
+    //everything is inilized. For example below code will throw error AuthorType not 
+    //found if not wrapped in a function
+    fields: () => ({
+        id: { type: GraphQLID  },
+        imgUrl: { type: GraphQLString },
+        name: { type: GraphQLString },
+        rating: { type: GraphQLString },
+        description: { type: GraphQLString },
+        author: {type: author_type }, 
+            
+        cookTime: { type: GraphQLString },
+        ingredients: { type: GraphQLString },
+        instructions: { type: GraphQLString },
+        equipment: { type: GraphQLString },
+        nutrition: { type: GraphQLString },
+        
+        //mae: { type: GraphQLInt },
+       
+    
+    })
+});
+
+// end of recipe defintiion
 const BookType = new GraphQLObjectType({
     name: 'Book',
     //We are wrapping fields in the function as we dont want to execute this ultil 
@@ -80,6 +118,19 @@ const RootQuery = new GraphQLObjectType({
             type: new GraphQLList(AuthorType),
             resolve(parent, args) {
                 return Author.find({});
+            }
+        },
+        recipe:{
+            type: RecipeType,
+            args: { id: { type: GraphQLID } },
+            resolve(parent, args) {
+                return Recipe.findById(args.id);
+            }
+        },
+        recipes:{
+            type: new GraphQLList(RecipeType),
+            resolve(parent, args) {
+                return Recipe.find({});
             }
         }
     }
