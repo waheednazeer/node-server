@@ -1,0 +1,39 @@
+### get all students
+GET http://localhost:3000/students
+
+### get student by id
+
+Get http://localhost:3000/students/64d08ae7acdf96497386e275
+
+### Create student
+POST http://localhost:3000/students HTTP/1.1
+content-type: application/json
+
+{
+  "year": 2000,
+  "semester":"Fall-20",
+  "profile": {
+    "name": "Ibrahim",
+    "phone": "0300 8037879",
+    "address": "Islamabad, Pakistan"
+  },
+  "courses": ["MATH 108X", "MATH 109"]
+}
+
+### update student
+PUT http://localhost:3000/students/64d0ad64b1d519b1b6800035
+content-type: application/json
+
+{
+  "year": 2022,
+  "semester":"Fall-22",
+  "profile": {
+    "name": "Maryam",
+    "phone": "0300 9039295",
+    "address": "Islamabad, Pakistan"
+  },
+  "courses": ["HUM 101", "MATH 109"]
+}
+
+### delete student
+DELETE http://localhost:3000/students/64d08ae7acdf96497386e275
