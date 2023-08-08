@@ -1,7 +1,7 @@
-****************************************************************************
-Queries
 
-// student mutation 
+## Queries
+
+## student mutation 
 
 mutation{
   addStudent(
@@ -31,7 +31,8 @@ mutation{
 }
 }
 
-//
+## Updating entry
+
 mutation{
   updateStudent(
     id: "64d089a11f093a19bc0223e8",
@@ -45,7 +46,7 @@ mutation{
   
 }
 
-// for all studetns query
+## for all studetns query
 {
   students{
     id
@@ -58,7 +59,8 @@ mutation{
     courses
   }
 }
-// for single query
+
+## for single query
 {
   student(id: "64d089a11f093a19bc0223e8"){
     id
@@ -72,7 +74,8 @@ mutation{
   }
 }
 
-// delete
+## delete
+
 mutation{
   deleteStudent(id: "64d08a807c7abd230b045a53"){
     id
