@@ -5,6 +5,9 @@ GET http://localhost:3000/students
 
 Get http://localhost:3000/students/64d08ae7acdf96497386e275
 
+
+
+
 ### Create student
 POST http://localhost:3000/students HTTP/1.1
 content-type: application/json
@@ -13,12 +16,27 @@ content-type: application/json
   "year": 2000,
   "semester":"Fall-20",
   "profile": {
-    "name": "Ibrahim",
-    "phone": "0300 8037879",
-    "address": "Islamabad, Pakistan"
+    "name": "Joseph",
+    "phone": "0800 999111222",
+    "address": "Global Village"
   },
-  "courses": ["MATH 108X", "MATH 109"]
+  "courses": ["MATH 111X", "MATH 250"]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### update student
 PUT http://localhost:3000/students/64d0ad64b1d519b1b6800035
