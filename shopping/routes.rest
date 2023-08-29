@@ -3,10 +3,10 @@ POST http://localhost:5500/product HTTP/1.1
 Content-Type: application/json
 
 {
-    "item_name" : "Pen",
-    "item_img" : "http://img.com",
+    "item_name" : "Golden Pen",
+    "item_img" : "/images/pen.jpg",
     "item_qty" : 1,
-    "item_price" : 4.5
+    "item_price" : 24.5
 }
 
 ###
